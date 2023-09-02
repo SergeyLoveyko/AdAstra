@@ -1,3 +1,12 @@
+/* body {
+  position: relative;
+} */
+
+body.no-scroll {
+  height: 100vh;
+  overflow-y: hidden !important;
+}
+
 .hidden {
   display: none;
 }
@@ -201,6 +210,15 @@
 }
 
 
+
+
+
+
+.article-main__content {
+  position: relative;
+}
+
+
 /* ----------------------------------- */
 /* ------------- footer -------------- */
 /* ----------------------------------- */
@@ -306,6 +324,113 @@
   padding: 1em;
   grid-area: e;
 }
+
+
+/* ----------------------------------- */
+/* -------------- modal -------------- */
+/* ----------------------------------- */
+
+
+.modal {
+  display: block !important;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0,0,0, .3);
+  display: grid !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow-y: auto !important;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .4s, visibility .4s;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__box {
+  position: relative;
+  max-width: 500px;
+  padding: 3em;
+  z-index: 3;
+  margin: 2em 1em;
+  border-radius: 1em;
+  background-color: white;
+  box-shadow: 0px 1px 17px 4px rgba(34, 60, 80, 0.2);
+  transform: scale(0);
+  transition: transform .8s;
+}
+
+.modal__btn {
+  position: absolute;
+  top: 1.2em;
+  right: 1.2em;
+  cursor: pointer;
+}
+
+.modal__btn-close {
+  font-size: 130%;
+  transition: .2s;
+}
+
+.modal__btn-close:hover {
+  filter: invert(48%) sepia(0%) saturate(1%) hue-rotate(141deg) brightness(96%) contrast(88%);
+  transition: .2s;
+}
+
+.modal.open .modal__box {
+  transform: scale(1);
+}
+
+.modal__btn-in-form {
+  max-width: 336px;
+  display: flex;
+  box-shadow: 0 4px 15px 0 rgb(129 150 160 / 45%);
+  border-radius: 5px;
+  background-color: red;
+  background-position: 1.35em 0.94em;
+  background-size: 1em;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  margin: 30px auto 0;
+  transition: .5s;
+}
+
+.modal__btn-in-form:hover {
+ background-color: #c80000;
+ transition: .5s;
+}
+
+.modal__btn-in-form a {
+  width: 100%;
+  display: block;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.modal__btn-in-form a:hover {
+  width: 100%;
+  display: block;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+
+
 
 
 
