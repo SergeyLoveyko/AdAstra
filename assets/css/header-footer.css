@@ -219,6 +219,13 @@ body.no-scroll {
 }
 
 
+
+
+.order_form {
+  max-width: 350px !important;
+}
+
+
 /* ----------------------------------- */
 /* ------------- footer -------------- */
 /* ----------------------------------- */
@@ -632,6 +639,27 @@ body.no-scroll {
 
   .header__row-second .header__item:nth-child(1) ~ .header__item {
     display: none;
+  }
+
+}
+
+
+
+/* ------------------------------------------------------- */
+/* ---------------------- footer  ------------------------ */
+/* ------------------------------------------------------- */
+
+
+
+
+@media  (max-width: 400px) {
+
+  .order_form {
+    width: 265px !important;
+  }
+
+  .order_form label {
+    width: 200px !important;
   }
 
 }
